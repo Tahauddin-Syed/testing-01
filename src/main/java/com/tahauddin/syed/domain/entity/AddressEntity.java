@@ -1,16 +1,14 @@
 package com.tahauddin.syed.domain.entity;
 
+import com.tahauddin.syed.domain.MyBaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Table(name = "ADDRESS_TABLE")
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class AddressEntity {
+@Getter
+@Setter
+public class AddressEntity extends MyBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

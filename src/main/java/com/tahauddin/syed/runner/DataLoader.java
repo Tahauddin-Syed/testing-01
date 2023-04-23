@@ -1,6 +1,7 @@
 package com.tahauddin.syed.runner;
 
 import com.tahauddin.syed.domain.constant.CustomerConstants;
+import com.tahauddin.syed.domain.constant.OrderTypeEnum;
 import com.tahauddin.syed.domain.entity.AddressEntity;
 import com.tahauddin.syed.domain.entity.CustomerEntity;
 import com.tahauddin.syed.domain.entity.OrderEntity;
@@ -48,7 +49,7 @@ public class DataLoader implements CommandLineRunner {
         januaryOrder.setOrderId("ORID"+RandomStringUtils.random(10, false, true));
         januaryOrder.setOrderPrice("40000");
         januaryOrder.setOrderName("JANUARY-ORDER");
-        januaryOrder.setOrderType(CustomerConstants.NORMAL.name());
+        januaryOrder.setOrderTypeEnum(OrderTypeEnum.NORMAL);
         januaryOrder.setCustomerId(customerEntity);
 
         OrderEntity febOrder = new OrderEntity();
@@ -56,7 +57,7 @@ public class DataLoader implements CommandLineRunner {
         febOrder.setOrderId("ORID"+RandomStringUtils.random(10, false, true));
         febOrder.setOrderPrice("50000");
         febOrder.setOrderName("FEB-ORDER");
-        febOrder.setOrderType(CustomerConstants.NORMAL.name());
+        febOrder.setOrderTypeEnum(OrderTypeEnum.EXPRESS);
         febOrder.setCustomerId(customerEntity);
 
         OrderEntity marOrder = new OrderEntity();
@@ -64,7 +65,7 @@ public class DataLoader implements CommandLineRunner {
         marOrder.setOrderId("ORID"+RandomStringUtils.random(10, false, true));
         marOrder.setOrderPrice("60000");
         marOrder.setOrderName("MARCH-ORDER");
-        marOrder.setOrderType(CustomerConstants.NORMAL.name());
+        marOrder.setOrderTypeEnum(OrderTypeEnum.SUPER_EXPRESS);
         marOrder.setCustomerId(customerEntity);
         customerEntity.setOrderEntity(List.of(januaryOrder, febOrder, marOrder));
         orderRepository.saveAll(List.of(januaryOrder, febOrder, marOrder));

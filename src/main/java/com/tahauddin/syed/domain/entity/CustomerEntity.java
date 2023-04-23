@@ -1,19 +1,17 @@
 package com.tahauddin.syed.domain.entity;
 
+import com.tahauddin.syed.domain.MyBaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "CUSTOMER_TABLE")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class CustomerEntity {
+@Getter
+@Setter
+public class CustomerEntity extends MyBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

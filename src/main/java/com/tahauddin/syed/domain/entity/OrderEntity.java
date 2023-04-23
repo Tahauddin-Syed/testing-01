@@ -1,16 +1,15 @@
 package com.tahauddin.syed.domain.entity;
 
+import com.tahauddin.syed.domain.MyBaseEntity;
+import com.tahauddin.syed.domain.constant.OrderTypeEnum;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "ORDER_TABLE")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class OrderEntity {
+@Getter
+@Setter
+public class OrderEntity extends MyBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,7 +21,8 @@ public class OrderEntity {
 
     private String orderPrice;
 
-    private String orderType;
+    @Enumerated(EnumType.STRING)
+    private OrderTypeEnum orderTypeEnum;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "customer_id", nullable = false)
