@@ -1,4 +1,5 @@
-package com.tahauddin.syed.domain.constant;
+package com.tahauddin.syed.constant;
+
 
 public enum CustomerConstants {
 
