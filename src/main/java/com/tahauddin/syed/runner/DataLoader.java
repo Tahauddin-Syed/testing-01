@@ -1,6 +1,5 @@
 package com.tahauddin.syed.runner;
 
-import com.tahauddin.syed.domain.constant.CustomerConstants;
 import com.tahauddin.syed.domain.constant.OrderTypeEnum;
 import com.tahauddin.syed.domain.entity.AddressEntity;
 import com.tahauddin.syed.domain.entity.CustomerEntity;
@@ -16,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+//@Component
 @Slf4j
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {

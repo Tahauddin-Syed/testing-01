@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-@Component
+//@Component
 @Slf4j
 @RequiredArgsConstructor
 public class RunnerTwo implements CommandLineRunner {
@@ -20,10 +20,10 @@ public class RunnerTwo implements CommandLineRunner {
         Method method = Arrays.stream(declaredMethods).findFirst().get();
         log.info("Method is :: {}", method);
         log.info("Method[] is :: {}", declaredMethods);
-
+        Arrays.stream(declaredMethods).toList().forEach(l -> log.info(l.getName()));
     }
 
-    public void m1(){
+    public void m1(String message){
         log.info("In M1()");
     }
 
