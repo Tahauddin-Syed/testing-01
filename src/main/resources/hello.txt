@@ -1,0 +1,3 @@
+Hi There
+This is Syed Tahauddin
+Reading a file from Class Path Resource Folder...
