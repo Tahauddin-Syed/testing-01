@@ -9,9 +9,9 @@ import lombok.experimental.SuperBuilder;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-//@SuperBuilder
-public class PostTransaction {
+//@Builder
+@SuperBuilder
+public class PostTransaction  extends BaseTransaction{
 
     private Long id;
 
